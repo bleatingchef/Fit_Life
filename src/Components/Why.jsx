@@ -10,11 +10,7 @@ const Why = () => {
       </p>
       <div className=" w-full">
         <img src={whyimg} alt="Gym Community" className="w-full rounded-lg shadow-lg border-4 border-blue-500" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="bg-black bg-opacity-50 p-4 rounded-full">
-
-          </div>
-        </div>
+       
       </div>
     </div>
     

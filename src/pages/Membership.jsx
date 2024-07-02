@@ -1,13 +1,14 @@
 import React from 'react'
-import Member from '../Components/Member'
-import Why from '../Components/Why'
-import MembershipJoin from '../Components/MembershipJoin'
-import Pricing from '../Components/Pricing'
+ import Member from '../Components/Member'
+ import MembershipJoin from '../Components/MembershipJoin'
+ import Pricing from '../Components/Pricing'
+ import Why from '../Components/Why'
 
-function Membership() {
+
+const Membership = () => {
   return (
     <div>
-        <Member/>
+      <Member/>
         <Why/>
         <Pricing/>
         <MembershipJoin/>

@@ -3,10 +3,10 @@ import rect from '../assets/rect16.png';
 
 const MembershipJoin = () => {
   return (
-    <div className="flex flex-col items-center justify-center text-white py-12 relative">
+    <div className="flex flex-col items-center justify-center text-white pb-20 relative">
       {/* <h1 className="text-7xl font-bold mb-6 text-teal-400 ">Join Our Membership</h1> */}
       <div className="relative w-full max-w-6xl">
-        <img src={rect} alt="" className="w-full rounded-lg mt-20" />
+        <img src={rect} alt="" className="w-full rounded-lg mt-" />
         <div className="absolute inset-0 flex items-center justify-between p-8">
           <div className="flex flex-col items-start">
             <h2 className="text-5xl font-bold mb-4 text-teal-400 mt-20">JOIN WITH US</h2>

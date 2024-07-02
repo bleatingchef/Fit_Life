@@ -10,10 +10,10 @@ const Navbar = () => {
           <img class="object-fill h-16 w-40 ... ml-10" src={logo} alt="" />
         </div>
       </div>
-      <div className="flex space-x-4 ">
+      <div className="flex space-x-4 z-index-1">
         <Link to='/' className="text-teal-500 text-2xl hover:text-teal-300 m-5">Home</Link>
         <Link to='/class' className="hover:text-teal-300 text-2xl m-5">Class</Link>
-        <Link to='/Membership' className="hover:text-teal-300 text-2xl m-5">Membership</Link>
+        <Link to='/Membership' className="hover:text-teal-300 text-2xl m-5">Memberships</Link>
         <Link to='/Gallery' className="hover:text-teal-300 text-2xl m-5">Gallery</Link>
         <Link to='/Contact' className="hover:text-teal-300 text-2xl m-5">Contact</Link>
       </div>
