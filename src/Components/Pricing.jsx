@@ -37,7 +37,7 @@ const PricingCard = ({ tier, price, features }) => (
         />
         <div className="flex relative flex-col pl-12 max-md:pl-8">
           <div className="self-center mr-7 text-4xl text-center text-white">{tier}</div>
-          <div className=" mt-6 text-5xl text-center text-cyan-400 max-md:mr-4 max-md:text-5xl">{price}</div>
+          <div className=" mt-6 text-5xl text-center text-teal-400 max-md:mr-4 max-md:text-5xl">{price}</div>
           <div className="self-start mt-16 text-2xl capitalize text-white text-opacity-30 ">
             {features.map((feature, index) => (
               <li key={index}>
@@ -105,7 +105,8 @@ const Pricing = () => {
 
   return (
     <div className="bg-black min-h-screen p-8">
-      <h2 className="text-cyan-400 text-6xl font-bold text-center mb-12">JOIN OUR MEMBERSHIP</h2>
+      {/* <h2 className="text-cyan-400 text-6xl font-bold text-center mb-12">JOIN OUR MEMBERSHIP</h2> */}
+      <h1 className="text-7xl font-bold mb-6 text-teal-400 text-center">Join Our Membership</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {pricingTiers.map((tier, index) => (
           <PricingCard key={index} {...tier} />

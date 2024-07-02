@@ -1,26 +1,31 @@
-import React from 'react'
-import Navbar from './Components/Navbar'
-import './index.css';
-import HeroSection from './Components/HeroSection';
-import Services from './Components/Services';
-import Pricing from './Components/Pricing';
-import Testimonials from './Components/Testimonials';
-import Extreme from './Components/Extreme';
-import Footer from './Components/Footer';
-
+import React from "react";
+import Navbar from "./Components/Navbar";
+import "./index.css";
+import Footer from "./Components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Membership from "./pages/Membership";
+import Class from "./pages/Class";
+import Gallery from "./pages/Gallery";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
-    <div >
-      <Navbar/>
-      <HeroSection/>
-      <Services/>
-      <Pricing/>
-      <Testimonials/>
-      <Extreme/>
-      <Footer/>
-    </div>
-  )
-}
+    <div>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Membership" element={<Membership />} />
+          <Route path="/Class" element={<Class/>}/>
+          <Route path="/Gallery" element={<Gallery/>}/>
+          <Route path="/Contact" element={<Contact/>}/>
+        </Routes>
 
-export default App
+        <Footer />
+      </Router>
+    </div>
+  );
+};
+
+export default App;
