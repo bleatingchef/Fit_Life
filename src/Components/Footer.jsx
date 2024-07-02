@@ -5,9 +5,9 @@ const AddressComponent = () => {
   return (
     <div className="flex items-center justify-center p-4 w-full h-24 bg-gray-800 rounded-full">
       <div className="flex items-center space-x-2">
-        <div className="flex items-center justify-center w-10 h-8 rounded-full bg-cyan-500">
+        <div className="flex items-center justify-center w-20 h-16 rounded-full bg-cyan-500">
           <svg
-            className="w-6 h-6 text-black"
+            className="w-16 h-20 text-black"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
