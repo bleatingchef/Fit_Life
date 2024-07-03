@@ -6,3 +6,8 @@ body {
     color: white; /* Optional: This sets the text color to white for better contrast */
   }
   
+  @layer utilities {
+    .bg-input-rgba {
+      background-color: rgba(0, 254, 247, 0.1);
+    }
+  }

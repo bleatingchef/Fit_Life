@@ -4,6 +4,7 @@ import Services from '../Components/Services';
 import Pricing from '../Components/Pricing';
 import Testimonials from '../Components/Testimonials';
 import Extreme from '../Components/Extreme';
+import MembershipJoin from '../Components/MembershipJoin';
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Pricing/>
       <Testimonials/>
       <Extreme/>
+      <MembershipJoin/>
     </div>
   )
 }
