@@ -79,12 +79,12 @@ function Contact() {
                   name="service"
                   value={form.service}
                   onChange={handleChange}
-                  className='w-full px-4 py-2 bg-input-rgba border border-2-teal-400 rounded-md text-white focus:outline-none focus:ring-4 focus:ring-teal-500'>
-                  <option value="">Select Services</option>
-                  <option value="Select Services 1">Select Services 1</option>
-                  <option value="Select Services 2">Select Services 2</option>
-                  <option value="Select Services 3">Select Services 3</option>
-                  <option value="Select Services 4">Select Services 4</option>
+                  className='w-full px-4 py-2 bg-input-rgba  border border-2-teal-400 rounded-md text-white focus:outline-none focus:ring-4 focus:ring-teal-500'>
+                  <option className='bg-cyan-500 text-black' value="">Select Services</option>
+                  <option className='bg-cyan-500 text-black' value="Select Services 1">Select Services 1</option>
+                  <option className='bg-cyan-500 text-black' value="Select Services 2">Select Services 2</option>
+                  <option className='bg-cyan-500 text-black' value="Select Services 3">Select Services 3</option>
+                  <option className='bg-cyan-500 text-black' value="Select Services 4">Select Services 4</option>
                 </select>
               </div>
               <div>
