@@ -4,6 +4,7 @@
 body {
     background-color: black;
     color: white; /* Optional: This sets the text color to white for better contrast */
+    overflow-x: hidden;
   }
   
   @layer utilities {

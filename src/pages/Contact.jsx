@@ -37,13 +37,13 @@ function Contact() {
   };
 
   return (
-    <div className='mb-10 '>
+    <div className='mb-10'>
       <ToastContainer />
       <Contact_head />
-      <div className='flex flex-col items-center mt-20'>
-        <div className='flex flex-col md:flex-row items-start'>
-          <div className='p-10 w-full h-full mr-9 bg-black text-white rounded-3xl border-2 border-teal-400'>
-            <form className='space-y-8' onSubmit={handleSubmit}>
+      <div className='flex flex-col items-center mt-10 sm:mt-20 px-4'>
+        <div className='flex flex-col md:flex-row items-start w-full max-w-7xl'>
+          <div className='p-6 sm:p-10 w-full md:w-2/3 bg-black text-white rounded-3xl border-2 border-teal-400 mb-10 md:mb-0 md:mr-10'>
+            <form className='space-y-6' onSubmit={handleSubmit}>
               <div>
                 <input
                   type="text"
@@ -79,7 +79,7 @@ function Contact() {
                   name="service"
                   value={form.service}
                   onChange={handleChange}
-                  className='w-full px-4 py-2 bg-input-rgba border border-2-teal-400 rounded-md text-white focus:outline-none focus:ring-4 focus:ring-teal-500'>
+                  className='w-full px-4 py-2 bg-input-rgba border-2 border-teal-400 rounded-md text-white focus:outline-none focus:ring-4 focus:ring-teal-500'>
                   <option value="">Select Services</option>
                   <option value="Select Services 1">Select Services 1</option>
                   <option value="Select Services 2">Select Services 2</option>
@@ -105,17 +105,17 @@ function Contact() {
               </div>
             </form>
           </div>
-          <div className='md:ml-10 pr-32 text-white'>
-            <p className='text-xl'>A-52, Som Bazar Chowk, Vikas Nagar Uttam Nagar, New Delhi-59 (INDIA)</p>
-            <hr className='my-4 border-white-400' />
-            <p className='text-xl'>info@markletechandmedia.com</p>
-            <p className='text-xl'>markletechandmedia@gmail.com</p>
-            <p className='text-xl'>+91-798-233-2070 / +91-767-810-2159</p>
+          <div className='w-full md:w-1/3 text-white md:pl-10'>
+            <p className='text-lg sm:text-xl'>A-52, Som Bazar Chowk, Vikas Nagar Uttam Nagar, New Delhi-59 (INDIA)</p>
+            <hr className='my-4 border-teal-400' />
+            <p className='text-lg sm:text-xl'>info@markletechandmedia.com</p>
+            <p className='text-lg sm:text-xl'>markletechandmedia@gmail.com</p>
+            <p className='text-lg sm:text-xl'>+91-798-233-2070 / +91-767-810-2159</p>
           </div>
         </div>
       </div>
-      <div className='flex justify-center items-center mt-20 mb-20'>
-        <img src={map} className='max-w-full h-full' alt="Result" />
+      <div className='flex justify-center items-center mt-10 sm:mt-20 px-4'>
+        <img src={map} className='w-full max-w-3xl rounded-md shadow-lg' alt="Map" />
       </div>
     </div>
   );
