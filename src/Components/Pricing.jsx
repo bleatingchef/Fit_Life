@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const PricingCard = ({ tier, price, features }) => (
   <div className="flex flex-col w-full">
@@ -12,7 +13,7 @@ const PricingCard = ({ tier, price, features }) => (
         />
         <div className="flex relative flex-col px-6 sm:px-8 md:px-10">
           <div className="text-3xl sm:text-4xl text-center text-white">{tier}</div>
-          <div className="mt-4 text-4xl sm:text-5xl text-center text-teal-400">{price}</div>
+          <div className="mt-4 text-4xl sm:text-5xl text-center text-teal-400">${price}</div>
           <ul className="mt-8 sm:mt-12 text-lg sm:text-xl space-y-2 text-white text-opacity-70">
             {features.map((feature, index) => (
               <li key={index} className={feature.active ? "text-white" : ""}>
@@ -35,44 +36,25 @@ const PricingCard = ({ tier, price, features }) => (
 );
 
 const Pricing = () => {
-  const pricingTiers = [
-    {
-      tier: 'BASIC',
-      price: "$20",
-      features: [
-        { text: 'Gym Without Trainers', active: true },
-        { text: 'Unlimited Access', active: true },
-        { text: 'Access To All Clubs', active: false },
-        { text: 'Training For All Classes', active: false },
-        { text: 'Exclusive Studio', active: false },
-        { text: 'Additional Session', active: false },
-      ],
-    },
-    {
-      tier: 'STANDARD',
-      price: "$35",
-      features: [
-        { text: 'Gym Without Trainers', active: true },
-        { text: 'Unlimited Access', active: true },
-        { text: 'Access To All Clubs', active: true },
-        { text: 'Training For All Classes', active: true },
-        { text: 'Exclusive Studio', active: false },
-        { text: 'Additional Session', active: false },
-      ],
-    },
-    {
-      tier: 'PROFESSIONAL',
-      price: "$50",
-      features: [
-        { text: 'Gym Without Trainers', active: true },
-        { text: 'Unlimited Access', active: true },
-        { text: 'Access To All Clubs', active: true },
-        { text: 'Training For All Classes', active: true },
-        { text: 'Exclusive Studio', active: true },
-        { text: 'Additional Session', active: true },
-      ],
-    },
-  ]
+  const [pricingTiers, setPricingTiers] = useState([]);
+
+  useEffect(() => {
+    const fetchPricingTiers = async () => {
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/membership/all`);
+        const data = response.data.map((membership) => ({
+          tier: membership.name,
+          price: membership.price,
+          features: membership.features.map((feature) => ({ text: feature, active: true })),
+        }));
+        setPricingTiers(data);
+      } catch (error) {
+        console.error('Error fetching pricing tiers:', error);
+      }
+    };
+
+    fetchPricingTiers();
+  }, []);
 
   return (
     <div className="bg-black min-h-screen p-4 sm:p-8">
@@ -83,7 +65,7 @@ const Pricing = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Pricing
+export default Pricing;
